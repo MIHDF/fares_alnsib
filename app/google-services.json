@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449206964440",
+    "project_id": "test-e3016",
+    "storage_bucket": "test-e3016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449206964440:android:95ef8a0067b82c25aec7ad",
+        "android_client_info": {
+          "package_name": "com.game.thoughtandfind"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449206964440-od2ounfm74sfilbel4pjvfn8ksch9u7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmjeyrWtlgnf4ewzGsHDAM2cSMupwy5Ks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449206964440-od2ounfm74sfilbel4pjvfn8ksch9u7p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

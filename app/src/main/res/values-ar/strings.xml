@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">فكر و اكتشف</string>
+    <string name="timer">00:00:20</string>
+    <string name="color_who_is">اللون المطلوب</string>
+    <string name="info_color">"غير الألوان الخمسة إلى اللون المطلوب قبل إنتهاء الوقت المحدد"</string>
+    <string name="info_color2">غير الألوان التي بالأسفل الى اللون المطلوب قبل إنتهاء الوقت المحدد</string>
+    <string name="info_q_2">اكتب الإجابة من خلال الحروف الموجودة بالأسفل لتنتقل غلى المرحلة التالية</string>
+    <string name="incramntel10">زيادة وقت 10</string>
+    <string name="ok">تأكيد الإجابة</string>
+    <string name="info_q_3">حل اللغز التالي من خلال الخيارات الموجودة في الأسفل</string>
+    <string name="level_nom">المرحلة 55</string>
+    <string name="coin">343</string>
+    <string name="q">ما هي وحدة قياس الصوت ؟</string>
+    <string name="tlmeh">تليمح ب 10</string>
+    <string name="fcker">فكر</string>
+    <string name="actashef">واكتشف</string>
+
+</resources>
