@@ -1,31 +1,33 @@
 package com.game.thoughtandfind.game.Ui;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.ContextCompat;
-
 import com.game.thoughtandfind.R;
-
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class ActivityOneQuseion extends AppCompatActivity {
-    ConstraintLayout Layout_first, Layout_Sacend, Layout_Therd;
-    View view;
-    long sec,Time;
-    TextView Number_8, Number_7, Number_6, Number_5, Number_4, Number_3, Number_2, Number_1, set_text, updet, number_coin, Timer, btn_color_1, btn_color_2, btn_color_3, btn_color_4, btn_color_5, btn_color_this, increase10s;
+
+    TextView number_coin, Timer, btn_color_1, btn_color_2, btn_color_3, btn_color_4, btn_color_5, btn_color_this,
+            increase10s, help_1, text_help_1, back_and_level_2back_and_level_1;
+
     int color, color2, color3, color4, color5, colors_tihs, secrnd30, plus10s;
-    String text = "";
+
+    long sec;
+
     ArrayList<Integer> arrayList = new ArrayList<>();
     Random random = new Random();
 
@@ -47,9 +49,12 @@ public class ActivityOneQuseion extends AppCompatActivity {
         timer();
         GameColors();
         funonCreate();
+        text_help_1.setVisibility(View.INVISIBLE);
+
 
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     private void funonCreate() {
         colors_tihs = random.nextInt((4 + 1 + 1 + 1));
         btn_color_this.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(colors_tihs)));
@@ -57,27 +62,41 @@ public class ActivityOneQuseion extends AppCompatActivity {
         increase10s.setVisibility(View.INVISIBLE);
 
 
+        help_1.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
 
-    }
+                int event = motionEvent.getActionMasked();
+                switch (event) {
+                    case MotionEvent.ACTION_DOWN:
+                        Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.anim1alqa);
+                        text_help_1.startAnimation(animation1);
+                        text_help_1.setVisibility(View.VISIBLE);
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        Animation animation2 = AnimationUtils.loadAnimation(getApplicationContext(),
+                                R.anim.anim1alqa);
+                        text_help_1.startAnimation(animation2);
+                        text_help_1.setVisibility(View.INVISIBLE);
+                }
+                return true;
+            }
+        });
 
-    private void validateColors() {
-        Layout_first.setVisibility(View.GONE);
-        Layout_Sacend.setVisibility(View.VISIBLE);
-        Layout_Therd.setVisibility(View.GONE);
-    }
+        back_and_level_2back_and_level_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActivityOneQuseion.this, LevelsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
-    private void findview() {
-
-        number_coin = findViewById(R.id.number_coin);
-        Layout_first = findViewById(R.id.Layout_first);
-        Timer = findViewById(R.id.Timer);
-        btn_color_this = findViewById(R.id.btn_color_this);
-        btn_color_1 = findViewById(R.id.btn_color_1);
-        btn_color_2 = findViewById(R.id.btn_color_2);
-        btn_color_3 = findViewById(R.id.btn_color_3);
-        btn_color_4 = findViewById(R.id.btn_color_4);
-        btn_color_5 = findViewById(R.id.btn_color_5);
-        increase10s = findViewById(R.id.increase10s);
+        String a = back_and_level_2back_and_level_1.getText().toString();
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("level1");
+        back_and_level_2back_and_level_1.setText(a + " " + name);
 
 
     }
@@ -165,7 +184,6 @@ public class ActivityOneQuseion extends AppCompatActivity {
 
         arrayList.add(R.color.white);
         arrayList.add(R.color.yallo);
-        arrayList.add(R.color.roze);
         arrayList.add(R.color.green);
         arrayList.add(R.color.black);
         arrayList.add(R.color.red);
@@ -241,5 +259,20 @@ public class ActivityOneQuseion extends AppCompatActivity {
         }
     }
 
+    private void findview() {
 
+        number_coin = findViewById(R.id.number_coin);
+        Timer = findViewById(R.id.Timer);
+        btn_color_this = findViewById(R.id.btn_color_this);
+        btn_color_1 = findViewById(R.id.btn_color_1);
+        btn_color_2 = findViewById(R.id.btn_color_2);
+        btn_color_3 = findViewById(R.id.btn_color_3);
+        btn_color_4 = findViewById(R.id.btn_color_4);
+        btn_color_5 = findViewById(R.id.btn_color_5);
+        increase10s = findViewById(R.id.increase10s);
+        help_1 = findViewById(R.id.help_1);
+        text_help_1 = findViewById(R.id.text_help_1);
+        back_and_level_2back_and_level_1 = findViewById(R.id.back_and_level_1);
+
+    }
 }

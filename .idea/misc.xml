@@ -3,12 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_expandable_list_item_1.xml" value="0.22245673279864922" />
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.22245673279864922" />
+        <entry key="..\:/Users/ASUS/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_2.xml" value="0.22245673279864922" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable-v24/shep.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable-v24/shep22.xml" value="0.188" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable-v24/shepColor.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable-v24/shepselector.xml" value="0.188" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/ShepColor.xml" value="0.2515" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/dialogue_color.xml" value="0.2155" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2485" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/ic_baseline_arrow_forward_24.xml" value="0.2485" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/ic_wrong.xml" value="0.188" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/prised.xml" value="0.279" />
@@ -20,11 +26,15 @@
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/shepcolor.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/drawable/sheplevel.xml" value="0.2515" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/font/font.xml" value="0.2626126126126126" />
-        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_one_quseion.xml" value="0.25517241379310346" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_levels.xml" value="0.22530996152201796" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_one_quseion.xml" value="0.20092592592592592" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_settings.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_splash_screen.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_there_quseion.xml" value="0.27447916666666666" />
-        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_tow_quseion.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_there_quseion.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/activity_tow_quseion.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/item.xml" value="0.23055555555555557" />
+        <entry key="..\:/Users/ASUS/ThoughtandFind/app/src/main/res/layout/spine.xml" value="0.264" />
       </map>
     </option>
   </component>

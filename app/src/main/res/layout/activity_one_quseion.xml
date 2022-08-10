@@ -46,29 +46,19 @@
 
 
             <TextView
-                android:id="@+id/back"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/back"
-                android:textAlignment="viewEnd"
-                app:layout_constraintEnd_toEndOf="@id/Layout_Tool_bar"
-                app:layout_constraintTop_toTopOf="@id/Layout_Tool_bar" />
 
-            <TextView
-                android:id="@+id/level"
+                android:id="@+id/back_and_level_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/ds"
-                android:text="@string/level_nom"
+                android:text="@string/level_number"
+                android:textAlignment="viewStart"
                 android:textColor="@color/white"
                 android:textSize="18sp"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/back"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/Layout_Tool_bar" />
 
 
@@ -81,8 +71,7 @@
         android:id="@+id/Layout_first"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        >
+        android:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,14 +117,14 @@
                     android:orientation="horizontal">
 
 
-                    <ImageView
+                    <TextView
                         android:id="@+id/help_1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="120dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginEnd="5dp"
-                        android:src="@drawable/tlmeh"
+                        android:background="@drawable/tlmeh"
                         android:textSize="24sp" />
 
                     <TextView
@@ -161,6 +150,7 @@
                     >
 
                     <TextView
+                        android:id="@+id/text_help_1"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
@@ -267,7 +257,6 @@
             </LinearLayout>
 
 
-
             <TextView
                 android:id="@+id/increase10s"
                 android:layout_width="wrap_content"
@@ -290,8 +279,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.gms.ads.AdView
-                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/adView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -300,21 +288,15 @@
 
                     ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
                     ads:layout_constraintBottom_toBottomOf="parent"
-                    ads:layout_constraintStart_toStartOf="parent"
                     ads:layout_constraintEnd_toEndOf="parent"
-
-                    >
-                </com.google.android.gms.ads.AdView>
+                    ads:layout_constraintStart_toStartOf="parent"></com.google.android.gms.ads.AdView>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
         </LinearLayout>
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 </LinearLayout>

@@ -6,8 +6,8 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="blue">#008AD7</color>
-    <color name="Qurmoze">#4169E1</color>
+    <color name="blue">#0080FF</color>
+    <color name="Qurmoze">#4FA7FF</color>
     <color name="red">#FF0000</color>
     <color name="green">#76FF03</color>
     <color name="roze">#1DE9B6</color>
@@ -15,5 +15,7 @@
     <color name="yallo">#FFD600</color>
     <color name="white">#FFFFFFFF</color>
     <color name="orange">#F57F17</color>
+    <color name="color1">#00DCFF</color>
+    <color name="color2">#006CD7</color>
 ]
 </resources>

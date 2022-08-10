@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/shepcolor"
     android:orientation="vertical"
-
     tools:context=".game.Ui.ActivityThereQuseion">
 
     <androidx.appcompat.widget.Toolbar
@@ -45,43 +44,27 @@
                 app:layout_constraintStart_toStartOf="@id/Layout_Tool_bar"
                 app:layout_constraintTop_toTopOf="@id/Layout_Tool_bar" />
 
-
             <TextView
-                android:id="@+id/back"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/back"
-                android:textAlignment="viewEnd"
-                app:layout_constraintEnd_toEndOf="@id/Layout_Tool_bar"
-                app:layout_constraintTop_toTopOf="@id/Layout_Tool_bar" />
-
-            <TextView
-                android:id="@+id/level"
+                android:id="@+id/back_and_level_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="10dp"
                 android:fontFamily="@font/ds"
-                android:text="@string/level_nom"
+                android:text="@string/level_number"
+                android:textAlignment="viewStart"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/back"
-                app:layout_constraintTop_toTopOf="@id/Layout_Tool_bar" />
-
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     </androidx.appcompat.widget.Toolbar>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Layout_Therd"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="visible"
@@ -96,155 +79,201 @@
 
             >
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+
+                <TextView
+                    android:id="@+id/textViewQuestion3"
+                    android:layout_width="340dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/quison"
+                    android:gravity="center"
+                    android:padding="18dp"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/help_3"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="18dp"
+                    android:background="@drawable/tlmeh"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewQuestion3"
+                    app:layout_constraintTop_toTopOf="@+id/textViewQuestion3"
+
+
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <TextView
-                android:id="@+id/textViewQuestion"
-                android:layout_width="340dp"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:gravity="center"
-                android:textSize="28dp"
-                android:textColor="@color/black"
-                android:background="@drawable/quison"
-
-                />
-
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/tlmeh"
-                android:textSize="24sp" />
-
-
-            <TextView
+                android:id="@+id/text_help_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/ds"
                 android:gravity="center"
+                android:textSize="18sp"
                 android:text="@string/info_q_3"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
+                android:textColor="@color/white"/>
 
             <TableLayout
+                android:id="@+id/Table_Layout_Bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="40dp"
 
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 >
 
                 <TableRow
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    >
+                    android:layout_marginBottom="8dp">
 
 
                     <TextView
                         android:id="@+id/op1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
                         android:background="@drawable/shep24"
                         android:gravity="center"
+                        android:padding="4dp"
                         android:paddingBottom="10dp"
-
-                        android:text="6"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/op2"
 
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
                         android:background="@drawable/shep24"
                         android:gravity="center"
+                        android:padding="4dp"
                         android:paddingBottom="10dp"
-                        android:text="2"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                 </TableRow>
 
                 <TableRow
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    >
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
 
                     <TextView
                         android:id="@+id/op3"
-
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
                         android:background="@drawable/shep24"
                         android:gravity="center"
+                        android:padding="4dp"
                         android:paddingBottom="10dp"
-                        android:text="8"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                     <TextView
                         android:id="@+id/op4"
-
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
+                        android:layout_width="130dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
                         android:background="@drawable/shep24"
                         android:gravity="center"
+                        android:padding="4dp"
                         android:paddingBottom="10dp"
-                        android:text="4"
                         android:textColor="@color/black"
-                        android:textSize="22sp" />
+                        android:textSize="19sp" />
 
                 </TableRow>
             </TableLayout>
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/yes"
-            android:layout_width="130dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="55dp"
-            android:background="@drawable/coin_payed"
-            android:gravity="center"
-            android:text="@string/incramntel10"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:drawableEndCompat="@drawable/coin_incermal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/buttonConfirmNext"
-            android:layout_width="130dp"
-            android:layout_height="30dp"
-            android:layout_marginBottom="5dp"
-            android:background="@drawable/coin_payed"
-            android:gravity="center"
-            android:text="تأكيد"
-            android:textColor="@color/green"
-            android:textSize="19sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:textAlignment="inherit"
+            app:layout_constraintBottom_toTopOf="@+id/adView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/yes"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/coin_payed"
+                    android:fontFamily="@font/ds"
+                    android:gravity="start|center"
+                    android:paddingEnd="10dp"
+                    android:text="@string/tlmeh"
+                    android:textColor="@color/black"
+                    android:textSize="21sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <Button
+                    android:id="@+id/buttonConfirmNext"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/conform"
+                    android:fontFamily="@font/ds"
+                    android:gravity="center"
+                    android:text="@string/conform"
+                    android:textColor="@color/black"
+                    android:textSize="21sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            ads:layout_constraintBottom_toBottomOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintStart_toStartOf="parent">
+
+        </com.google.android.gms.ads.AdView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </LinearLayout>

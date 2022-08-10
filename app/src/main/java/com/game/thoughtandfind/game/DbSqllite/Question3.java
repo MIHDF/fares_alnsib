@@ -1,33 +1,33 @@
 package com.game.thoughtandfind.game.DbSqllite;
 
-public class GetAndSet {
-    private String question;
+public class Question3 {
+
+
+    private String Question3;
     private String option1;
     private String option2;
     private String option3;
     private String option4;
+    private int answerNr3;
 
-
-    private int answerNr;
-
-    public GetAndSet() {
+    public Question3() {
     }
 
-    public GetAndSet(String question, String option1, String option2, String option3, String option4, int answerNr) {
-        this.question = question;
+    public Question3(String question3, String option1, String option2, String option3, String option4, int answerNr3) {
+        Question3 = question3;
         this.option1 = option1;
         this.option2 = option2;
         this.option3 = option3;
         this.option4 = option4;
-        this.answerNr = answerNr;
+        this.answerNr3 = answerNr3;
     }
 
-    public String getQuestion() {
-        return question;
+    public String getQuestion3() {
+        return Question3;
     }
 
-    public void setQuestion(String question) {
-        this.question = question;
+    public void setQuestion3(String question3) {
+        Question3 = question3;
     }
 
     public String getOption1() {
@@ -62,11 +62,13 @@ public class GetAndSet {
         this.option4 = option4;
     }
 
-    public int getAnswerNr() {
-        return answerNr;
+    public int getAnswerNr3() {
+        return answerNr3;
     }
 
-    public void setAnswerNr(int answerNr) {
-        this.answerNr = answerNr;
+    public void setAnswerNr3(int answerNr3) {
+        this.answerNr3 = answerNr3;
     }
 }
+
+
