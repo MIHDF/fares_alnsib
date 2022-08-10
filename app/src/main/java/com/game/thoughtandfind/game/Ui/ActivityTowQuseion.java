@@ -84,6 +84,7 @@ public class ActivityTowQuseion extends AppCompatActivity {
             Number_6.setText(currenquestions2.getAlphabet6());
             Number_7.setText(currenquestions2.getAlphabet7());
             Number_8.setText(currenquestions2.getAlphabet8());
+            //
 
             OnClick2.setOnClickListener(new View.OnClickListener() {
                 @Override
