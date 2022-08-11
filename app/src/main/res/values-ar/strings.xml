@@ -16,5 +16,19 @@
     <string name="actashef">واكتشف</string>
     <string name="level_number">المرحلة</string>
     <string name="conform">تأكيد الإجابة</string>
+    <string name="text_add">أحصل على نقاط من خلال :</string>
+    <string name="text_add_1">أحصل على 5 نقاط</string>
+    <string name="text_add_2">أحصل على 10 نقاط</string>
+    <string name="congrats">"مبارك"</string>
+    <string name="congrat">تهانينا</string>
+    <string name="next">المرحلة التالية</string>
+    <string name="right_ans">أحسنت , +5 نقاط</string>
+    <string name="full">خسارة</string>
+    <string name="try_ageen">حاول مرة أخرى, -5 نقاط</string>
+    <string name="try_level">إعادة المحاولة</string>
+    <string name="choose_between">هل تريد إضافة وقت ؟</string>
+    <string name="pay_time">شراء وقت ب10  نقاط</string>
+    <string name="try_level2">خروج</string>
+
 
 </resources>

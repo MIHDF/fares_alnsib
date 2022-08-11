@@ -2,17 +2,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/textViewuyfehkhwfk"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#27B3FF"
+        android:layout_height="55dp"
+        android:background="@drawable/color_level"
         android:gravity="center"
-        android:text="1"
         android:textColor="@color/white"
         android:textSize="34sp"
+        android:fontFamily="@font/ce"
         android:layout_margin="3dp"
         android:textStyle="bold" />
+
 </LinearLayout>

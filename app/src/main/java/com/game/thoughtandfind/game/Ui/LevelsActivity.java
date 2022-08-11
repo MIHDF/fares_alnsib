@@ -19,14 +19,14 @@ public class LevelsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         fullScreen();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
 
 
-        gridView = findViewById(R.id.gridView);
 
+
+        gridView = findViewById(R.id.gridView);
         String[] StringArray = {
 
                 "1", "2", "3", "4",
@@ -73,8 +73,9 @@ public class LevelsActivity extends AppCompatActivity {
                 "145", "146", "147", "148",
                 "149", "150", "151", "152", "153"
 
-
         };
+
+
 
         Adapter adapter = new Adapter(this, StringArray);
         gridView.setAdapter(adapter);
@@ -113,6 +114,8 @@ public class LevelsActivity extends AppCompatActivity {
         });
 
     }
+
+
     private void fullScreen() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);

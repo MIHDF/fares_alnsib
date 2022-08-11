@@ -15,7 +15,6 @@ public class DbHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "DbHelper";
     private static final int DATABASE_VERSION = 1;
-
     private SQLiteDatabase db;
 
     public DbHelper(Context context) {
@@ -59,11 +58,10 @@ public class DbHelper extends SQLiteOpenHelper {
 
                 ")";
 
-//        db.execSQL("create Table users(Score TEXT)");
+        db.execSQL("create Table users(Score TEXT)");
 
         db.execSQL(SQL_CREATE_QUESTIONS_TABLE);
         fillQuestions3Table();
-//        fillQuestions2Table();
 
     }
 
@@ -297,23 +295,16 @@ public class DbHelper extends SQLiteOpenHelper {
         addQuestion3(q51);
     }
 
-//
-//    public String getScore(String username) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//
-//        Cursor cursor = db.rawQuery("Select * from info where username = ?", new String[]{username});
-//        cursor.moveToFirst();
-//        return cursor.getString(0);
-//    }
-//
-//    public long update (String username) {
-//        int last = Integer.parseInt(getScore(username));
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        ContentValues contentValues = new ContentValues();
-//        contentValues.put("Score", last + 10);
-//
-//        return db.update("info", contentValues, "username =?", new String[]{username});
-//    }
+
+    public String getScore(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.rawQuery("Select * from info where username = ?", new String[]{username});
+        cursor.moveToFirst();
+        return cursor.getString(0);
+    }
+
+
 
 
     private void addQuestion2(Questions2 questions2) {
@@ -342,8 +333,8 @@ public class DbHelper extends SQLiteOpenHelper {
 
         if (cu.moveToFirst()) {
             do {
-                Questions2 questions2 = new Questions2();
 
+                Questions2 questions2 = new Questions2();
                 questions2.setQuestion2(cu.getString(cu.getColumnIndex(FinalContract.DbTable.COLUMN_QUESTION2)));
                 questions2.setAlphabet1(cu.getString(cu.getColumnIndex(FinalContract.DbTable.COLUMN_ALPHA_BET1)));
                 questions2.setAlphabet2(cu.getString(cu.getColumnIndex(FinalContract.DbTable.COLUMN_ALPHA_BET2)));
@@ -383,6 +374,7 @@ public class DbHelper extends SQLiteOpenHelper {
         if (c.moveToFirst()) {
             do {
                 Question3 question3 = new Question3();
+
                 question3.setQuestion3(c.getString(c.getColumnIndex(FinalContract.DbTable.COLUMN_QUESTION3)));
                 question3.setOption1(c.getString(c.getColumnIndex(FinalContract.DbTable.COLUMN_OPTION1)));
                 question3.setOption2(c.getString(c.getColumnIndex(FinalContract.DbTable.COLUMN_OPTION2)));
@@ -390,6 +382,7 @@ public class DbHelper extends SQLiteOpenHelper {
                 question3.setOption4(c.getString(c.getColumnIndex(FinalContract.DbTable.COLUMN_OPTION4)));
                 question3.setAnswerNr3(c.getInt(c.getColumnIndex(FinalContract.DbTable.COLUMN_ANSWER_NR3)));
                 question3List.add(question3);
+
             } while (c.moveToNext());
         }
         c.close();

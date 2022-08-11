@@ -383,7 +383,7 @@
                 />
 
                 <TextView
-                    android:id="@+id/OnClick2"
+                    android:id="@+id/OnClick223"
                     android:layout_width="155dp"
                     android:layout_height="42dp"
                     android:layout_marginStart="8dp"

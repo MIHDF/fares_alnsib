@@ -11,9 +11,12 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+
 import com.game.thoughtandfind.R;
+
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -22,15 +25,12 @@ import java.util.Random;
 public class ActivityOneQuseion extends AppCompatActivity {
 
     TextView number_coin, Timer, btn_color_1, btn_color_2, btn_color_3, btn_color_4, btn_color_5, btn_color_this,
-            increase10s, help_1, text_help_1, back_and_level_2back_and_level_1;
-
+            increase10s, help_1, text_help_1, back_and_level_1;
     int color, color2, color3, color4, color5, colors_tihs, secrnd30, plus10s;
-
     long sec;
 
     ArrayList<Integer> arrayList = new ArrayList<>();
     Random random = new Random();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,6 @@ public class ActivityOneQuseion extends AppCompatActivity {
         fullScreen();
         setContentView(R.layout.activity_one_quseion);
         allFun();
-
 
     }
 
@@ -50,8 +49,6 @@ public class ActivityOneQuseion extends AppCompatActivity {
         GameColors();
         funonCreate();
         text_help_1.setVisibility(View.INVISIBLE);
-
-
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -60,8 +57,6 @@ public class ActivityOneQuseion extends AppCompatActivity {
         btn_color_this.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(colors_tihs)));
 
         increase10s.setVisibility(View.INVISIBLE);
-
-
         help_1.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -84,7 +79,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
             }
         });
 
-        back_and_level_2back_and_level_1.setOnClickListener(new View.OnClickListener() {
+        back_and_level_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ActivityOneQuseion.this, LevelsActivity.class);
@@ -93,11 +88,11 @@ public class ActivityOneQuseion extends AppCompatActivity {
             }
         });
 
-        String a = back_and_level_2back_and_level_1.getText().toString();
+        String a = back_and_level_1.getText().toString();
         Intent intent = getIntent();
         String name = intent.getStringExtra("level1");
-        back_and_level_2back_and_level_1.setText(a + " " + name);
-
+        String all = a + " " + name;
+        back_and_level_1.setText(all);
 
     }
 
@@ -106,22 +101,24 @@ public class ActivityOneQuseion extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
+
     private void timer() {
 
 
-        secrnd30 = 41000 + plus10s;
+
+
+        secrnd30 = 46000 + plus10s;
         increase10s.setEnabled(false);
 
         new CountDownTimer(secrnd30, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                final NumberFormat f = new DecimalFormat();
-                final long hour = (millisUntilFinished / 3600000) % 24;
-                final long min = (millisUntilFinished / 60000) % 60;
+                NumberFormat f = new DecimalFormat();
+                long hour = (millisUntilFinished / 3600000) % 24;
+                long min = (millisUntilFinished / 60000) % 60;
                 sec = (millisUntilFinished / 1000) % 60;
-
-
                 final String x = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
+
                 Timer.setText(x);
 
 
@@ -129,8 +126,8 @@ public class ActivityOneQuseion extends AppCompatActivity {
 
             // When the task is over it will print 00:00:00 there
             public void onFinish() {
-                Timer.setText("00:00:00");
 
+                Timer.setText("00:00:00");
                 increase10s.setEnabled(true);
                 increase10s.setVisibility(View.VISIBLE);
 
@@ -143,39 +140,38 @@ public class ActivityOneQuseion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                increase10s.setEnabled(false);
+                timer();
+                increase10s.setVisibility(View.INVISIBLE);
 
-                new CountDownTimer(secrnd30, 1000) {
-
-                    public void onTick(long millisUntilFinished) {
-                        final NumberFormat f = new DecimalFormat();
-                        final long hour = (millisUntilFinished / 3600000) % 24;
-                        final long min = (millisUntilFinished / 60000) % 60;
-                        sec = (millisUntilFinished / 1000) % 60;
-
-
-                        final String x = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
-                        Timer.setText(x);
-
-
-                    }
-
-                    // When the task is over it will print 00:00:00 there
-                    public void onFinish() {
-                        Timer.setText("00:00:00");
-                        increase10s.setEnabled(true);
-
-                    }
-
-
-                }.start();
-            }
+//                increase10s.setEnabled(false);
 //
+//                new CountDownTimer(secrnd30, 1000) {
+//
+//                    public void onTick(long millisUntilFinished) {
+//                        final NumberFormat f = new DecimalFormat();
+//                        final long hour = (millisUntilFinished / 3600000) % 24;
+//                        final long min = (millisUntilFinished / 60000) % 60;
+//                        sec = (millisUntilFinished / 1000) % 60;
+//
+//
+//                        final String x = f.format(hour) + ":" + f.format(min) + ":" + f.format(sec);
+//                        Timer.setText(x);
+//
+//
+//                    }
+//
+//                    // When the task is over it will print 00:00:00 there
+//                    public void onFinish() {
+//                        Timer.setText("00:00:00");
+//                        increase10s.setEnabled(true);
+//
+//                    }
+//
+//
+//                }.start();
+            }
 
         });
-
-
-//    int day = 604800000;
 
     }
 
@@ -187,16 +183,15 @@ public class ActivityOneQuseion extends AppCompatActivity {
         arrayList.add(R.color.green);
         arrayList.add(R.color.black);
         arrayList.add(R.color.red);
-        arrayList.add(R.color.B);
         arrayList.add(R.color.orange);
-        arrayList.add(R.color.blue);
+        arrayList.add(R.color.purple_700);
 
         btn_color_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                for (int i = 0; i < 10; i++) {
-                    color = random.nextInt((4 + 1 + 1 + 1) + 1);
+                for (int i = 0; i <= 7; i++) {
+                    color = random.nextInt((4 + 1 + 1 + 1));
                 }
 
                 btn_color_1.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(color)));
@@ -209,7 +204,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < 10; i++) {
-                    color2 = random.nextInt((4 + 1 + 1 + 1) + 1);
+                    color2 = random.nextInt((4 + 1 + 1 + 1));
                 }
                 btn_color_2.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(color2)));
                 vildeion(color, color2, color3, color4, color5, colors_tihs);
@@ -220,7 +215,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < 10; i++) {
-                    color3 = random.nextInt((4 + 1 + 1 + 1) + 1);
+                    color3 = random.nextInt((4 + 1 + 1 + 1));
                 }
                 btn_color_3.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(color3)));
                 vildeion(color, color2, color3, color4, color5, colors_tihs);
@@ -231,7 +226,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < 10; i++) {
-                    color4 = random.nextInt((4 + 1 + 1 + 1) + 1);
+                    color4 = random.nextInt((4 + 1 + 1 + 1));
                 }
                 btn_color_4.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(color4)));
                 vildeion(color, color2, color3, color4, color5, colors_tihs);
@@ -242,7 +237,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < 10; i++) {
-                    color5 = random.nextInt((4 + 1 + 1 + 1) + 1);
+                    color5 = random.nextInt((4 + 1 + 1 + 1));
                 }
                 btn_color_5.setBackgroundColor(ContextCompat.getColor(getApplicationContext(), arrayList.get(color5)));
                 vildeion(color, color2, color3, color4, color5, colors_tihs);
@@ -251,12 +246,14 @@ public class ActivityOneQuseion extends AppCompatActivity {
 
     }
 
-    public void vildeion(int color2, int color, int color3, int color4, int color5, int colors_tihs) {
+    public boolean vildeion(int color2, int color, int color3, int color4, int color5, int colors_tihs) {
 
-        if (color == color3 && color == color4 && color2 == color && color5 == color && color == colors_tihs
+        if (color == color3 && color == color4 && color == color2 && color == color5 && color == colors_tihs
         ) {
             Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
         }
+        return false;
+
     }
 
     private void findview() {
@@ -272,7 +269,7 @@ public class ActivityOneQuseion extends AppCompatActivity {
         increase10s = findViewById(R.id.increase10s);
         help_1 = findViewById(R.id.help_1);
         text_help_1 = findViewById(R.id.text_help_1);
-        back_and_level_2back_and_level_1 = findViewById(R.id.back_and_level_1);
+        back_and_level_1 = findViewById(R.id.back_and_level_1);
 
     }
 }

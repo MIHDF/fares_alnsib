@@ -1,11 +1,6 @@
 <resources>
     <string name="app_name">Thought and Find</string>
     <string name="timer">00:00:20</string>
-    <string-array name="size_text">
-
-
-    </string-array>
-    <string name="color_who_is">اللون المطلوب</string>
     <string name="info_color">"غير الألوان الخمسة إلى اللون المطلوب قبل إنتهاء الوقت المحدد"</string>
     <string name="info_color2">غير الألوان التي بالأسفل الى اللون المطلوب قبل إنتهاء الوقت المحدد</string>
     <string name="info_q_2">اكتب الإجابة من خلال الحروف الموجودة بالأسفل لتنتقل إلى المرحلة التالية</string>
@@ -19,4 +14,25 @@
     <string name="actashef">واكتشف</string>
     <string name="level_number">المرحلة</string>
     <string name="conform">تأكيد الإجابة</string>
+    <string name="text_add">أحصل على نقاط من خلال :</string>
+    <string name="text_add_1">أحصل على 5 نقاط</string>
+    <string name="text_add_2">أحصل على 10 نقاط</string>
+    <string name="congrats">"congratulations"</string>
+    <string name="color_who_is">اللون المطلوب</string>
+    <string name="congrat">congratulations</string>
+    <string name="next">المرحلة التالية</string>
+    <string name="right_ans">أحسنت , +5 نقاط</string>
+    <string name="full">خسارة</string>
+    <string name="try_ageen">حاول مرة أخرى, -5 نقاط</string>
+    <string name="try_level">إعادة المحاولة</string>
+    <string name="choose_between">هل تريد إضافة وقت ؟</string>
+    <string name="pay_time">شراء وقت ب10  نقاط</string>
+    <string name="try_level2">خروج</string>
+    <string name="pay_time2">10 نقاط لتمديد الوقت</string>
+
+
+    <string-array name="size_text">
+    </string-array>
+
+
 </resources>

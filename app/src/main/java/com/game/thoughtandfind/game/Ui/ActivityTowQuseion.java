@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -28,13 +29,13 @@ public class ActivityTowQuseion extends AppCompatActivity {
 
     LinearLayout Layout_Sacend;
     TextView Number_8, Number_7, Number_6, Number_5, Number_4, Number_3, Number_2, Number_1, set_text, delete, number_coin,
-            help_2, text_help_2, back_and_level_2, textViewQuestion2 , OnClick2;
+            help_2, text_help_2, back_and_level_2, textViewQuestion2, OnClick2;
     String text = "";
     private List<Questions2> questions2slist;
-//    int ;
+    //    int ;
     Questions2 currenquestions2;
-    MotionEvent motionEvent2 ;
-    private int questionCounter , questionCountTotal;
+    MotionEvent motionEvent2;
+    private int questionCounter, questionCountTotal;
 
 
     @Override
@@ -84,19 +85,29 @@ public class ActivityTowQuseion extends AppCompatActivity {
             Number_6.setText(currenquestions2.getAlphabet6());
             Number_7.setText(currenquestions2.getAlphabet7());
             Number_8.setText(currenquestions2.getAlphabet8());
-            //
+
+            for (Questions2 questions2 : questions2slist) {
+
+                Log.e("TAG", "DBHelper: " + questions2.getQuestion2());
+            }
 
 
             OnClick2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (currenquestions2.getAnswer2().equals(set_text.getText().toString())){
-                        Toast.makeText(getApplicationContext(), "صحيح", Toast.LENGTH_SHORT).show();
+                    String x = set_text.getText().toString();
 
-                    }else {
+                    if (!x.equals(currenquestions2.getAnswer2())) {
                         Toast.makeText(getApplicationContext(), "خطأ", Toast.LENGTH_SHORT).show();
 //                        motionEvent2.
                         Layout_Sacend.setBackgroundColor(getColor(R.color.red));
+                        Toast.makeText(getApplicationContext(), currenquestions2.getAnswer2(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), x, Toast.LENGTH_SHORT).show();
+
+                    }else if (x.equals(currenquestions2.getAnswer2())){
+                        Toast.makeText(getApplicationContext(), "صحيح", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), currenquestions2.getAnswer2(), Toast.LENGTH_SHORT).show();
+                        Layout_Sacend.setBackgroundColor(getColor(R.color.green));
 
                     }
                 }
@@ -273,7 +284,7 @@ public class ActivityTowQuseion extends AppCompatActivity {
     private void deleteText() {
 
         funcionAnimion();
-        String x = " ";
+        String x = "";
         text = x;
         delete.setVisibility(View.INVISIBLE);
         set_text.setText("");
@@ -375,7 +386,7 @@ public class ActivityTowQuseion extends AppCompatActivity {
         text_help_2 = findViewById(R.id.text_help_2);
         back_and_level_2 = findViewById(R.id.back_and_level_2);
         textViewQuestion2 = findViewById(R.id.textViewQuestion2);
-        OnClick2 = findViewById(R.id.OnClick2);
+        OnClick2 = findViewById(R.id.OnClick223);
 
 
     }
